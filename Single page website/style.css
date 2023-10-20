@@ -1,0 +1,514 @@
+/* Reset margin and padding */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font-family to Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Banner styling */
+#banner {
+    /* Background gradient */
+    background: linear-gradient(rgb(0,0,0,0.5), #009688), url(./Images/background\ 1.jpg);
+    /* Background size */
+    background-size: cover;
+    /* Background position */
+    background-position: center;
+    /* Banner height */
+    height: 100vh;
+}
+
+/* Define logo style */
+.logo {
+    width: 120px; /* Set logo width */
+    position: absolute; /* Position logo */
+    border-radius: 20px; /* Set logo border radius */
+    top: 4%; /* Set logo top position */
+    left: 10%; /* Set logo left position */
+}
+/* Banner text styling */
+.banner-text {
+    /* Center text horizontally */
+    text-align: center;
+
+    /* Set text color to white */
+    color: white;
+
+    /* Add padding around text */
+    padding: 180px;
+}
+
+
+/* Set font size and family for h1 element */
+.banner-text h1 {
+    font-size: 130px; /* Set font size to 130px */
+    font-family: 'Pacifico', cursive; /* Set font family to Pacifico */
+}
+/* Set font size and style for banner text */
+.banner-text p {
+    font-size: 20px; /* Set font size to 20px */
+    font-style: italic; /* Set font style to italic */
+}
+
+/* Banner button styling */
+.banner-btn {
+    margin: 70px auto 0; /* Top margin, auto center, no bottom margin */
+}
+/* Banner button style */
+.banner-btn a {
+    width: 150px; /* Button width */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as block */
+    margin: 0 10px; /* Horizontal margin */
+    padding: 12px 0; /* Vertical padding */
+    color: #fff; /* Text color */
+    border: .5px solid; /* Border style */
+    position: relative; /* Position relative to parent */
+    z-index: 1; /* Stacking order */
+    transition: color 0.5s; /* Color transition */
+}
+/* Banner button span */
+.banner-btn a span {
+    /* Set width and height */
+    width: 0;
+    height: 100%;
+
+    /* Position span */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Set background color */
+    background: #fff;
+
+    /* Set z-index */
+    z-index: -1;
+
+    /* Add transition effect */
+    transition: 0.5s;
+}
+
+/* Change width of span on hover */
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+/* Change color of banner button on hover */
+.banner-btn a:hover {
+    color: #000; /* Black color on hover */
+}
+
+/* Side navigation styling */
+#sidenav {
+    /* Set width and height */
+    width: 250px;
+    height: 100vh;
+
+    /* Position fixed to the right */
+    position: fixed;
+    right: -250px;
+    top: 0;
+
+    /* Set background color */
+    background: #009688;
+
+    /* Set z-index for layering */
+    z-index: 2;
+
+    /* Set transition for smooth sliding */
+    transition: 0.5s;
+}
+nav ul li{
+/* Remove default list style */
+list-style: none;
+
+/* Set margin for list items */
+margin: 50px 20px;
+}
+/* Remove list style, add margin, remove text decoration, set color */
+nav ul li a {
+    list-style: none;
+    margin: 50px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+/* Menu button styling */
+#menubtn {
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    background: #009688; /* Button background color */
+    text-align: center; /* Center text alignment */
+    position: fixed; /* Fixed positioning */
+    right: 30px; /* Distance from right edge */
+    top: 20px; /* Distance from top edge */
+    border-radius: 3px; /* Button border radius */
+    z-index: 3; /* Stacking order */
+    cursor: pointer; /* Cursor style on hover */
+}
+#menubtn img{
+    width: 20px;
+    margin-top:15px;
+}
+
+@media screen and (max-width: 770px){
+    .banner-text h1{
+        font-size:44px;
+        font-family: 'Pacifico', cursive;
+        display: inline;
+    }
+    .banner-btn a{
+        display: block;
+        margin:20px;
+    }
+}
+/*--FEATURE--*/
+#features{
+    width:100%;
+    padding:20px 0;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+    margin:auto;
+    font-size:20px;
+    color:#009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display:inline-block;
+}
+.title-text p::after{
+    content: '';
+    width:50px;
+    height:35px;
+    background: linear-gradient(#019587 #fff);
+    position: absolute;
+    top:-20px;
+    left:0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+.title-text h1{
+    font-size:50px;
+}
+.feature-box{
+    width:80%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features{
+    flex-basis: 50%;
+}
+.features-img {
+    flex-basis:50%;
+    margin: auto;
+}
+.features-img img{
+    width:60%;
+    border-radius: 10px;
+}
+.features h2{
+    text-align:left;
+    margin-bottom:10px;
+    font-weight: 100;
+    color:#009688;
+}
+.feature-description{
+    display:flex;
+    align-items: center;
+    margin-bottom:40px ;
+}
+
+.feature-icon .fa-solid {
+    width: 50px; /* Set icon width */
+    height: 50px; /* Set icon height */
+    font-size: 30px; /* Set icon font size */
+    line-height: 30px; /* Set icon line height */
+    border-radius: 8px; /* Set icon border radius */
+    color: #009688; /* Set icon color */
+    border: 1px solid #009688; /* Set icon border */
+}
+
+/* Set padding and text alignment */
+.feature-text p {
+    padding: 0 20px; /* Add padding to left and right */
+    text-align: initial; /* Reset text alignment */
+}
+
+/* Responsive design for screens with max-width of 770px */
+@media screen and (max-width: 770px){
+     /* Adjust the font size of the h1 element to 35px */
+    .title-text h1{
+        font-size:35px;}
+        .features{
+            flex-basis: 100%;}
+            /* Set flex-basis to 100% for .features-img */
+            .features-img {
+                flex-basis:100%;
+            }
+            /* Set image width to 100% */
+            .features-img img{
+                width:100%;
+                }
+}
+/* SERVICES */
+
+/* Service section styling */
+#service{
+    width: 100%; /* Full width */
+    padding: 70px 0; /* Vertical padding */
+    background: #efefef; /* Light grey background */
+}
+/* Service box container */
+.service-box {
+    width: 100%; /* Container width */
+    display: flex; /* Flexible container */
+    flex-wrap: wrap; /* Wrap items to next row */
+    justify-content: center;
+    gap:20px;
+}
+/* Single service container */
+.single-service {
+    /* Set container width */
+    flex-basis: 48%;
+    /* Center text */
+    text-align: center;
+    /* Add border radius */
+    border-radius: 7px;
+    /* Add margin bottom */
+    margin-bottom: 20px;
+    /* Set text color */
+    color: #fff;
+    position: relative;
+}
+
+/* Single service image styling */
+.single-service img{
+    width:100%; /* Set image width to 100% */
+    border-radius: 7px; /* Add border radius to image */
+}
+/* Overlay element */
+.overlay {
+    /* Set width and height to 100% */
+    width: 100%;
+    height: 100%;
+
+    /* Position absolute */
+    position: absolute;
+    top: 0;
+
+    /* Set border radius */
+    border-radius: 7px;
+
+    /* Set cursor to pointer */
+    cursor: pointer;
+
+    /* Set background gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+
+    /* Set initial opacity */
+    opacity: 0;
+
+    /* Set transition */
+    transition: 1s;
+}
+/* Hover effect for single service */
+.single-service:hover .overlay {
+    opacity: 1; /* Fully opaque overlay */
+}
+/* Service description styling */
+/* Set service description width to 80% */
+.service-description {
+    width: 80%; 
+
+    /* Position absolute */
+    position: absolute; 
+
+    /* Set bottom to 0 */
+    bottom: 0; 
+
+    /* Set left to 50% */
+    left: 50%; 
+
+    /* Set opacity to 0 */
+    opacity: 0; 
+
+    /* Center horizontally */
+    transform: translateX(-50%); 
+
+    /* Set transition to 1s */
+    transition:1s ;
+}
+/* Define horizontal rule */
+hr {
+    /* Set background color to white */
+    background: #fff;
+    /* Set height to 2 pixels */
+    height: 2px;
+    /* Remove border */
+    border:0;
+    /* Set margin to 15 pixels auto */
+    margin:15px auto;
+   /* Set width to 60% */
+   width:60%;
+}
+
+.service-description p{
+    font-size:14px; /* Set Font size to 14 pixels */
+}
+
+/* Hover effect for single service */
+.single-service:hover .service-description {
+    /* Position description at bottom of service */
+    bottom: 40%;
+    /* Show description with full opacity */
+    opacity: 1;
+}
+@media screen and (max-width: 770px){
+    .single-service{
+        flex-basis:100%;
+        margin-bottom:30px;
+        }
+        .service-description p{
+            font-size:12px;
+        } 
+        hr{
+            margin:5px auto;
+        }
+        .single-service:hover .service-description {
+            bottom: 25% !important;
+        }
+}
+
+/* TESTIMONIAL*/
+#testimonial{
+width:100%;
+background:#fff;
+padding: 70px 0;
+}
+.testimonial-row{
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col{
+    flex-basis: 28%;
+    padding:10px;
+    margin:30px;
+    border-radius:5px;
+    box-shadow: 0 10px 20px 3px #00968814 ;
+    cursor:pointer;
+    transition: transform .5s;
+}
+.testimonial-col p{
+    font-size:14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin:20px 0;
+    flex-wrap: wrap;
+   
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius:3px;
+}
+.testimonial-col:hover{
+    transform: translateY(-7px);
+}
+@media screen and (max-width: 770px){
+    .testimonial-col{
+        flex-basis: 100%;
+    }
+
+}
+/* FOOTER */
+#footer {
+    width:100%;
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+.footer-row{
+    width:80%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.footer-left,.footer-right{
+    flex-basis: 30%;
+    padding-left:10px;
+    margin-bottom:20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-left{
+    text-align:left;
+}
+.footer-row h1{
+    margin:10px;
+}
+.footer-row p{
+    line-height: 35px;
+}
+.footer-img{
+    max-width: 400px;
+    opacity: 0.1;
+    position: absolute;
+    left:40%;
+    top:15%;
+    transform: translate(-50 -50);
+}
+.social-links{
+    text-align: center;
+}
+.social-links .fa-brands{
+    height: 40px;
+    width: 40px;
+    font-size:20px;
+    line-height: 40px;
+    border: 1px solid #009688;
+    margin:40px 5px 0;
+    color:#009688;
+    transition:.5s;
+}
+.social-links .fa-brands:hover{
+    background: #009688;
+    color:#fff;
+    transform: translateY(-7px);
+
+}
+.social-links p{
+    font: size 15px;
+    font-weight: bold;
+    margin-top:20px;
+}
+@media screen and (max-width: 770px) {
+      .footer-left,.footer-right{
+            flex-basis: 100%;
+            font-size:14px;
+        } 
+        .footer-img {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+      }
+    
